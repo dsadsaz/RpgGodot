@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dx27eulsghspb"]
+
+[ext_resource type="Texture2D" uid="uid://bi8xjqdebbpk8" path="res://world/tree.png" id="1_tn4rm"]
+[ext_resource type="Texture2D" uid="uid://dtrjjog04tlv8" path="res://shadows/large_shadow.png" id="2_1q5bg"]
+
+[node name="Tree" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.18987083, -14)
+texture = ExtResource("1_tn4rm")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-0.10129118, -14)
+scale = Vector2(0.7974138, 0.96336204)
+polygon = PackedVector2Array(-6, 22, 9, 22, 14, 6, 8.693209, -7, -8.693209, -7, -15, 8)
+
+[node name="ShadowSprite2D" type="Sprite2D" parent="."]
+show_behind_parent = true
+y_sort_enabled = true
+position = Vector2(0, 2)
+texture = ExtResource("2_1q5bg")
