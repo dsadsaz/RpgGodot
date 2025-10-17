@@ -35,7 +35,7 @@ tile_set = ExtResource("3_dwbse")
 
 [node name="Player" parent="." instance=ExtResource("1_f3sb7")]
 y_sort_enabled = true
-position = Vector2(183, 80)
+position = Vector2(142, 117)
 
 [node name="BGShit" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -90,11 +90,10 @@ position = Vector2(358, 139)
 position = Vector2(316, 189)
 
 [node name="BatEnemy" parent="." instance=ExtResource("8_gbfbk")]
-position = Vector2(112, 118)
+position = Vector2(359, 61)
 
-[node name="BatEnemy2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("8_gbfbk")]
-position = Vector2(255, 59)
-player = NodePath("../Player")
+[node name="BatEnemy2" parent="." instance=ExtResource("8_gbfbk")]
+position = Vector2(433, 149)
 
 [node name="BatEnemy3" parent="." instance=ExtResource("8_gbfbk")]
 position = Vector2(233, 278)
