@@ -21,7 +21,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Area2D/CollisionPolygon2D:polygon")
+tracks/1/path = NodePath("Area2D/HitBoxSword:polygon")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -50,7 +50,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Area2D/CollisionPolygon2D:polygon")
+tracks/1/path = NodePath("Area2D/HitBoxSword:polygon")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -79,7 +79,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Area2D/CollisionPolygon2D:polygon")
+tracks/1/path = NodePath("Area2D/HitBoxSword:polygon")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -108,7 +108,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Area2D/CollisionPolygon2D:polygon")
+tracks/1/path = NodePath("Area2D/HitBoxSword:polygon")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -137,7 +137,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Area2D/CollisionPolygon2D:polygon")
+tracks/1/path = NodePath("Area2D/HitBoxSword:polygon")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -507,14 +507,13 @@ advance_mode = 2
 states/AttackState/node = SubResource("AnimationNodeBlendSpace2D_knn7v")
 states/AttackState/position = Vector2(604, 260)
 states/MoveState/node = SubResource("AnimationNodeStateMachine_s7qer")
-states/MoveState/position = Vector2(598, 109)
+states/MoveState/position = Vector2(598, 114)
 states/RollState/node = SubResource("AnimationNodeBlendSpace2D_g6k8r")
 states/RollState/position = Vector2(654, 0)
 transitions = ["Start", "MoveState", SubResource("AnimationNodeStateMachineTransition_g4c7l"), "MoveState", "AttackState", SubResource("AnimationNodeStateMachineTransition_yw30f"), "AttackState", "MoveState", SubResource("AnimationNodeStateMachineTransition_qjkh3"), "MoveState", "RollState", SubResource("AnimationNodeStateMachineTransition_g6k8r"), "RollState", "MoveState", SubResource("AnimationNodeStateMachineTransition_boad6")]
-graph_offset = Vector2(-162, -120)
+graph_offset = Vector2(-212, -162)
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_7pqkx"]
-graph_offset = Vector2(239.32605, 213.00586)
 nodes/output/position = Vector2(1100, 280)
 nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_knn7v")
 nodes/StateMachine/position = Vector2(792.0607, 214.12799)
@@ -530,6 +529,7 @@ texture = ExtResource("1_oul6g")
 hframes = 60
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+callback_mode_process = 0
 libraries = {
 &"": SubResource("AnimationLibrary_2ieo8")
 }
@@ -540,7 +540,7 @@ tree_root = SubResource("AnimationNodeBlendTree_7pqkx")
 advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
 parameters/StateMachine/AttackState/blend_position = Vector2(0.17001057, 0.23104048)
-"parameters/StateMachine/MoveState/RunState /blend_position" = Vector2(0.24069762, -0.4470842)
+"parameters/StateMachine/MoveState/RunState /blend_position" = Vector2(-0.00051891804, -0.0382514)
 parameters/StateMachine/MoveState/StandState/blend_position = Vector2(0.008139491, -0.775378)
 parameters/StateMachine/RollState/blend_position = Vector2(-0.37558138, 0.27429807)
 
@@ -561,4 +561,4 @@ texture = ExtResource("3_g1dw6")
 
 [node name="Area2D" type="Area2D" parent="."]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+[node name="HitBoxSword" type="CollisionPolygon2D" parent="Area2D"]
