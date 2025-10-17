@@ -9,6 +9,8 @@ const SPEED = 50
 @onready var animation_tree: AnimationTree = $AnimationTree
 @onready var playback = animation_tree.get("parameters/StateMachine/playback") as AnimationNodeStateMachinePlayback
 
+# hasfdd
+
 func _physics_process(_delta: float) -> void:
 	var state = playback.get_current_node()
 	
